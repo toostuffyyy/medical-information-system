@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="MISMedicalCardMobile1/MISMedicalCardMobile1/App.axaml" value="MISMedicalCardMobile1/MISMedicalCardMobile1.Desktop/MISMedicalCardMobile1.Desktop.csproj" />
+        <entry key="MISMedicalCardMobile1/MISMedicalCardMobile1/Views/AuthorizationView.axaml" value="MISMedicalCardMobile1/MISMedicalCardMobile1.Desktop/MISMedicalCardMobile1.Desktop.csproj" />
+        <entry key="MISMedicalCardMobile1/MISMedicalCardMobile1/Views/MainView.axaml" value="MISMedicalCardMobile1/MISMedicalCardMobile1.Desktop/MISMedicalCardMobile1.Desktop.csproj" />
+        <entry key="MISMedicalCardMobile1/MISMedicalCardMobile1/Views/MainWindow.axaml" value="MISMedicalCardMobile1/MISMedicalCardMobile1.Desktop/MISMedicalCardMobile1.Desktop.csproj" />
+        <entry key="MISMedicalCardMobile1/MISMedicalCardMobile1/Views/MedicalCardView.axaml" value="MISMedicalCardMobile1/MISMedicalCardMobile1.Desktop/MISMedicalCardMobile1.Desktop.csproj" />
+        <entry key="MISMedicalCardMobile1/MISMedicalCardMobile1/Views/MedicalCartView.axaml" value="MISMedicalCardMobile1/MISMedicalCardMobile1.Desktop/MISMedicalCardMobile1.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

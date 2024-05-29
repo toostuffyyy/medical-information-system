@@ -1,0 +1,64 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:MISEmployeeDesktop.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="1400" d:DesignHeight="900"
+             x:DataType="viewModels:CreateMedicalEventViewModel"
+             x:Class="MISEmployeeDesktop.Views.CreateMedicalEventView">
+    <Grid>
+        <Button Content="Выйти"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Command="{Binding GoBack}"/>
+        <StackPanel Spacing="25">
+            <TextBlock Text="Направление" HorizontalAlignment="Center" Margin="0,25"
+                       FontSize="35"/>
+            <Grid Margin="75,25">
+                <Border Background="#F4F4F4F4" CornerRadius="15" Padding="50">
+                    <StackPanel Spacing="50">
+                        <TextBlock Text="Направление" FontWeight="Bold"/>
+                        <Grid>
+                            <StackPanel HorizontalAlignment="Left">
+                                <TextBlock Text="Тип направления"/>
+                                <ComboBox ItemsSource="{Binding TypeMedicalEvents}"
+                                          SelectedItem="{Binding SelectedTypeMedicalEvents}"
+                                          DisplayMemberBinding="{Binding Name}"
+                                          Width="250"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Right">
+                                <TextBlock Text="Название"/>
+                                <TextBox Text="{Binding MedicalEvent.Name}" Width="750" />
+                            </StackPanel>
+                        </Grid>
+                        <Grid>
+                            <StackPanel HorizontalAlignment="Left">
+                                <TextBlock Text="Цена"/>
+                                <TextBox Text="{Binding MedicalEvent.Price}" Width="250" />
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center">
+                                <TextBlock Text="Дата и время начала"/>
+                                <CalendarDatePicker SelectedDate="{Binding MedicalEvent.StartDateTime}"
+                                                    Width="250" HorizontalContentAlignment="Center" Watermark="Выберите дату"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Right">
+                                <TextBlock Text="Дата и время окончания"/>
+                                <CalendarDatePicker SelectedDate="{Binding MedicalEvent.EndDateTime}" 
+                                                    Width="250" HorizontalContentAlignment="Center" Watermark="Выберите дату"/>
+                            </StackPanel>
+                        </Grid>
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="Рекомендации"/>
+                            <TextBox Text="{Binding MedicalEvent.Recommendation}" Width="1000" Height="150" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </StackPanel>
+        <Button Content="Сформировать"
+                VerticalAlignment="Bottom"
+                Command="{Binding CreateMedicalEvent}"
+                Margin="0,50"
+                FontSize="25"/>
+    </Grid>
+</UserControl>

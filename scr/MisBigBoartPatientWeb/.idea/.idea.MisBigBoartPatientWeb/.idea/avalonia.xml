@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="MisBigBoartPatientWeb/MisBigBoartPatientWeb/App.axaml" value="MisBigBoartPatientWeb/MisBigBoartPatientWeb.Browser/MisBigBoartPatientWeb.Browser.csproj" />
+        <entry key="MisBigBoartPatientWeb/MisBigBoartPatientWeb/Styles/Styles.axaml" value="MisBigBoartPatientWeb/MisBigBoartPatientWeb.Browser/MisBigBoartPatientWeb.Browser.csproj" />
+        <entry key="MisBigBoartPatientWeb/MisBigBoartPatientWeb/Views/AuthorizarionView.axaml" value="MisBigBoartPatientWeb/MisBigBoartPatientWeb.Desktop/MisBigBoartPatientWeb.Desktop.csproj" />
+        <entry key="MisBigBoartPatientWeb/MisBigBoartPatientWeb/Views/HospitalizationView.axaml" value="MisBigBoartPatientWeb/MisBigBoartPatientWeb.Desktop/MisBigBoartPatientWeb.Desktop.csproj" />
+        <entry key="MisBigBoartPatientWeb/MisBigBoartPatientWeb/Views/MainView.axaml" value="MisBigBoartPatientWeb/MisBigBoartPatientWeb.Browser/MisBigBoartPatientWeb.Browser.csproj" />
+        <entry key="MisBigBoartPatientWeb/MisBigBoartPatientWeb/Views/MainWindow.axaml" value="MisBigBoartPatientWeb/MisBigBoartPatientWeb.Desktop/MisBigBoartPatientWeb.Desktop.csproj" />
+        <entry key="MisBigBoartPatientWeb/MisBigBoartPatientWeb/Views/QrCodeView.axaml" value="MisBigBoartPatientWeb/MisBigBoartPatientWeb.Browser/MisBigBoartPatientWeb.Browser.csproj" />
+        <entry key="MisBigBoartPatientWeb/MisBigBoartPatientWeb/Views/RegistrationView.axaml" value="MisBigBoartPatientWeb/MisBigBoartPatientWeb.Desktop/MisBigBoartPatientWeb.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:MisBigBoartPatientWeb.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+             Width="720" Height="480"
+             x:DataType="viewModels:AuthorizarionViewModel"
+             x:Class="MisBigBoartPatientWeb.Views.AuthorizarionView">
+    
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="35" Margin="5">
+        <TextBlock Classes="Header" Text="Введите код для госпитализации" HorizontalAlignment="Center"/>
+        <TextBox Text="{Binding Hospitalization.Code}" Watermark="Код госпитализации" Width="500"/>
+        <Button Content="Войти" HorizontalAlignment="Center" Command="{Binding GoToHospitalization}"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="50">
+            <Button Content="Считать QR-code" Command="{Binding GoToWriteQRCode}"/>
+            <Button Content="Регистрация" Command="{Binding GoToRegistration}"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

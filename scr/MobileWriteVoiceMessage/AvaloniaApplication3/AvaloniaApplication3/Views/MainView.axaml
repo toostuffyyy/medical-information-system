@@ -1,0 +1,34 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaApplication3.ViewModels"
+             xmlns:controls="clr-namespace:Material.Styles.Controls;assembly=Material.Styles"
+             xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaApplication3.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext> 
+    <Grid RowDefinitions="*,100">
+        <Grid Margin="10,0,0,0" Grid.Row="1" ColumnDefinitions="*,100">
+            <DockPanel IsVisible="{Binding IsRecord}">
+                <avalonia:MaterialIcon Foreground="Red" Kind="RecordCircle" HorizontalAlignment="Center" VerticalAlignment="Center" DockPanel.Dock="Left"></avalonia:MaterialIcon>
+                <TextBlock Margin="5,0,0,0" FontSize="25" FontWeight="Bold" VerticalAlignment="Center" Text="{Binding Time}"></TextBlock>
+            </DockPanel>
+            <controls:FloatingButton Command="{Binding StartRecordCommand}" IsVisible="{Binding !IsRecord}" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsExtended="True">
+                <controls:FloatingButton.Content>
+                    <avalonia:MaterialIcon Kind="Microphone"/>
+                </controls:FloatingButton.Content>
+            </controls:FloatingButton>
+            <controls:FloatingButton Command="{Binding StopRecordCommand}" IsVisible="{Binding IsRecord}" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsExtended="True">
+                <controls:FloatingButton.Content>
+                    <avalonia:MaterialIcon Kind="Stop"/>
+                </controls:FloatingButton.Content>
+            </controls:FloatingButton>
+        </Grid>
+    </Grid>
+</UserControl>

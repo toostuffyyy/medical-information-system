@@ -1,0 +1,24 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MISSheduleEmployee.App"
+             xmlns:local="using:MISSheduleEmployee"
+             xmlns:icos="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+             xmlns:converters="clr-namespace:MISSheduleEmployee.Converters"
+             RequestedThemeVariant="Light">
+    
+    <Application.Resources>
+        <converters:DateConverter x:Key="DateConverter"/>
+        <converters:TimeRangeConverter x:Key="TimeRangeConverter"/>
+    </Application.Resources>
+    
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+    <Application.Styles>
+        <FluentTheme />
+        <icos:MaterialIconStyles />
+        <StyleInclude Source="Styles/MainStyles.axaml"/>
+        <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml" />
+    </Application.Styles>
+</Application>

@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:MISEmployeeDesktop.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="800"
+             x:DataType="viewModels:MainViewModel"
+             x:CompileBindings="False"
+             x:Class="MISEmployeeDesktop.Views.MainView">
+    <Grid RowDefinitions="50,*">
+        <Button Content="Выйти" HorizontalAlignment="Right" Command="{Binding GoBack}"/>
+        <StackPanel Orientation="Horizontal" Spacing="50" Margin="50,0">
+            <Button Content="Отслеживание" Command="{Binding GoTrackingView}"/>
+        </StackPanel>
+        <DataGrid Grid.Row="1" ItemsSource="{Binding MedicalCards}"
+                  AutoGenerateColumns="False" Margin="0,25" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Number}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Patient.Surname}"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Patient.Name}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patient.Patronymic}"/>
+                <DataGridTextColumn Header="Адрес" Binding="{Binding Patient.Address}"/>
+                <DataGridTextColumn Header="Номер телефона" Binding="{Binding Patient.PhoneNumber}"/>
+                <DataGridTextColumn Header="Последнее посещение" Binding="{Binding LastVisitDate,StringFormat={}{0:dd.MM.yyyy}}"/>
+                <DataGridTemplateColumn Header="Подробнее">
+                    <DataTemplate>
+                        <Button Content="Подробнее"
+                                Margin="0,5"
+                                Command="{Binding DataContext.DetailedCommand, 
+                                    RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                CommandParameter="{Binding}"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

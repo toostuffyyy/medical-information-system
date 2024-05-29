@@ -1,0 +1,40 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:Material.Styles.Controls;assembly=Material.Styles"
+             xmlns:icons="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+             xmlns:viewModels="clr-namespace:MISMedicalCardMobile1.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="viewModels:MedicalCardViewModel"
+             x:Class="MISMedicalCardMobile1.Views.MedicalCardView">
+    <Grid>
+        <controls:FloatingButton Command="{Binding StartRecordCommand}"
+            IsVisible="{Binding !IsRecond}"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             IsExtended="True">
+            <controls:FloatingButton.Content>
+                <icons:MaterialIcon Kind="Microphone"/>
+            </controls:FloatingButton.Content>
+        </controls:FloatingButton>
+        <controls:FloatingButton Command="{Binding StartRecordCommand}"
+            IsVisible="{Binding !IsRecond}"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             IsExtended="True">
+            <controls:FloatingButton.Content>
+                <icons:MaterialIcon Kind="Microphone"/>
+            </controls:FloatingButton.Content>
+        </controls:FloatingButton>
+        <controls:FloatingButton Command="{Binding StopRecordCommand}"
+            IsVisible="{Binding IsRecond}"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             IsExtended="True">
+            <controls:FloatingButton.Content>
+                <icons:MaterialIcon Kind="Stop"/>
+            </controls:FloatingButton.Content>
+        </controls:FloatingButton>
+    </Grid>
+</UserControl>

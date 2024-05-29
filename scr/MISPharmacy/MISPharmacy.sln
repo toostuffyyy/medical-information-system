@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISPharmacy", "MISPharmacy\MISPharmacy\MISPharmacy.csproj", "{DE656454-3D10-4702-9A95-D8CB6C870293}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISPharmacy.Android", "MISPharmacy\MISPharmacy.Android\MISPharmacy.Android.csproj", "{C0B844CD-8E5E-4AD7-B31A-51EFBD9C49B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISPharmacy.Desktop", "MISPharmacy\MISPharmacy.Desktop\MISPharmacy.Desktop.csproj", "{DFDD0821-B15F-4255-A8E7-5BDC127CFB77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISPharmacy.iOS", "MISPharmacy\MISPharmacy.iOS\MISPharmacy.iOS.csproj", "{8ECD3E56-3DD8-4C58-8696-4C5E25276D4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISPharmacy.Browser", "MISPharmacy\MISPharmacy.Browser\MISPharmacy.Browser.csproj", "{C9E1A10E-F258-4D30-8355-5F4E9DA21D53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{0CC1D83B-08BB-42BC-8D78-7A27745AEBC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE656454-3D10-4702-9A95-D8CB6C870293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE656454-3D10-4702-9A95-D8CB6C870293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE656454-3D10-4702-9A95-D8CB6C870293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE656454-3D10-4702-9A95-D8CB6C870293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0B844CD-8E5E-4AD7-B31A-51EFBD9C49B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0B844CD-8E5E-4AD7-B31A-51EFBD9C49B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0B844CD-8E5E-4AD7-B31A-51EFBD9C49B2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C0B844CD-8E5E-4AD7-B31A-51EFBD9C49B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0B844CD-8E5E-4AD7-B31A-51EFBD9C49B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0B844CD-8E5E-4AD7-B31A-51EFBD9C49B2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DFDD0821-B15F-4255-A8E7-5BDC127CFB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFDD0821-B15F-4255-A8E7-5BDC127CFB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFDD0821-B15F-4255-A8E7-5BDC127CFB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFDD0821-B15F-4255-A8E7-5BDC127CFB77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ECD3E56-3DD8-4C58-8696-4C5E25276D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ECD3E56-3DD8-4C58-8696-4C5E25276D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ECD3E56-3DD8-4C58-8696-4C5E25276D4B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8ECD3E56-3DD8-4C58-8696-4C5E25276D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ECD3E56-3DD8-4C58-8696-4C5E25276D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ECD3E56-3DD8-4C58-8696-4C5E25276D4B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C9E1A10E-F258-4D30-8355-5F4E9DA21D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E1A10E-F258-4D30-8355-5F4E9DA21D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E1A10E-F258-4D30-8355-5F4E9DA21D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E1A10E-F258-4D30-8355-5F4E9DA21D53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CC1D83B-08BB-42BC-8D78-7A27745AEBC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC1D83B-08BB-42BC-8D78-7A27745AEBC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC1D83B-08BB-42BC-8D78-7A27745AEBC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC1D83B-08BB-42BC-8D78-7A27745AEBC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

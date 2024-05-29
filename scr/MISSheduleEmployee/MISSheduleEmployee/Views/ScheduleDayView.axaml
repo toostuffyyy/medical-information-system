@@ -1,0 +1,86 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:MISSheduleEmployee.ViewModels"
+             xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="viewModels:ScheduleDayViewModel"
+             x:Class="MISSheduleEmployee.Views.ScheduleDayView">
+    
+    <Grid RowDefinitions="60, *">
+        <Grid>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Spacing="25">
+                <Button Content="Выйти" Command="{Binding GoBack}"/>
+                <ComboBox VerticalAlignment="Center" ItemsSource="{Binding Specializations}"
+                          SelectedItem="{Binding SelectedSpecialization}" 
+                          Width="200" DisplayMemberBinding="{Binding Name}"
+                          SelectionChanged="SelectingItemsControl_OnSelectionChanged"/>
+                <ComboBox VerticalAlignment="Center" ItemsSource="{Binding Employees}"
+                          SelectedItem="{Binding SelectedEmployee}"
+                          Width="150" DisplayMemberBinding="{Binding Surname}"
+                          SelectionChanged="SelectingItemsControl_OnSelectionChanged"/>
+                <CalendarDatePicker SelectedDate="{Binding StartDate}" 
+                                    Watermark="от" UseFloatingWatermark="True"
+                                    SelectedDateChanged="CalendarDatePicker_OnSelectedDateChanged"/>
+                <CalendarDatePicker SelectedDate="{Binding EndDate}" 
+                                    Watermark="до" UseFloatingWatermark="True"
+                                    SelectedDateChanged="CalendarDatePicker_OnSelectedDateChanged"/> 
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Spacing="50">
+                <StackPanel Orientation="Horizontal" Spacing="25">
+                    <Button Content="День" Classes="Accent" />
+                    <Button Content="Неделя" Command="{Binding GoDayViewSchedule}" />
+                    <Button Content="Сейчас" Command="{Binding SelectedDateNow}"/>
+                    <CalendarDatePicker SelectedDate="{Binding SelectedDate}" 
+                                        Watermark="Выберите день" UseFloatingWatermark="True"
+                                        SelectedDateChanged="CalendarDatePicker_OnSelectedDateChanged"/>
+                    <Button Command="{Binding PreviousWeek}">
+                        <Button.Content>
+                            <avalonia:MaterialIcon Kind="NavigateBefore"/>
+                        </Button.Content>
+                    </Button>
+                    <Button Command="{Binding NextWeek}">
+                        <Button.Content>
+                            <avalonia:MaterialIcon Kind="NavigateNext"/>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+                <Button Content="Добавить событие" Classes="Accent"/>
+            </StackPanel>
+        </Grid>
+        
+        <DataGrid Grid.Row="1" Width="1100" CanUserReorderColumns="False"
+                  CanUserResizeColumns="False" CanUserSortColumns="False"
+                  IsReadOnly="True" 
+                  ItemsSource="{Binding ScheduleEmployees}" 
+                  AutoGenerateColumns="False" Margin="15">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Доктор" Width="150">
+                    <DataTemplate>
+                        <StackPanel Spacing="5" Margin="0,15">
+                            <TextBlock HorizontalAlignment="Center" FontSize="20">
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} {1}" FallbackValue="">
+                                        <Binding Path="Employee.Surname" FallbackValue=""/>
+                                        <Binding Path="Employee.Name" FallbackValue=""/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                            <TextBlock Text="{Binding Employee.Specialization.Name}" FontSize="16" HorizontalAlignment="Center"
+                                       FontWeight="Bold"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="{Binding SelectedDate.Date, StringFormat={}{0:dddd} ({0:dd.MM.yy})}">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding Converter="{StaticResource TimeRangeConverter}">
+                            <Binding Path="StartTime"/>
+                            <Binding Path="EndTime"/>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,132 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:MISEmployeeDesktop.Views"
+             mc:Ignorable="d" d:DesignWidth="1400" d:DesignHeight="900"
+             x:DataType="views:MedicalCardDetailsViewModel"
+             x:Class="MISEmployeeDesktop.Views.MedicalCardDetailsView">
+    <Grid ColumnDefinitions="0.5*,*" Margin="5">
+        <Button Content="Выйти"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Command="{Binding GoBack}"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Spacing="25" Margin="0,25">
+            <Image Height="250" Width="250"
+                   Source="{Binding Patient.Photo}"/>
+            <Button Content="Загрузить" Width="150" HorizontalAlignment="Center"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Spacing="25" Margin="50,25">
+            <Border Background="#f4f4f4" CornerRadius="15" Padding="25">
+                <StackPanel Spacing="25">
+                    <TextBlock Text="Личная информация" FontWeight="Bold"/>
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Left">
+                            <TextBlock Text="Серия паспорта"/>
+                            <TextBox Text="{Binding Patient.PassportSeries}" MaxLength="4"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="Номер паспорта"/>
+                            <TextBox Text="{Binding Patient.PassportNumber}" MaxLength="6"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right">
+                            <TextBlock Text="Пол"/>
+                            <ComboBox ItemsSource="{Binding Genders}" 
+                                      DisplayMemberBinding="{Binding Name}" 
+                                      Width="250"
+                                      SelectedItem="{Binding Patient.Gender}"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Left">
+                            <TextBlock Text="Фамилия" VerticalAlignment="Center"/>
+                            <TextBox Text="{Binding Patient.Surname}"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="Имя"/>
+                            <TextBox Text="{Binding Patient.Name}"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right">
+                            <TextBlock Text="Отчество"/>
+                            <TextBox Text="{Binding Patient.Patronymic}"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Left">
+                            <TextBlock Text="Дата рождения"/>
+                            <CalendarDatePicker HorizontalContentAlignment="Center" Watermark="Выберите дату" Width="250" 
+                                                SelectedDate="{Binding Patient.DateOfBirth}"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="Почта"/>
+                            <TextBox Text="{Binding Patient.Email}"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right">
+                            <TextBlock Text="Номер телефона"/>
+                            <TextBox Text="{Binding Patient.PhoneNumber}"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Left">
+                            <TextBlock Text="Адрес"/>
+                            <TextBox Text="{Binding Patient.Address}" 
+                                     HorizontalAlignment="Left" Width="350" Height="100"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right">
+                            <TextBlock Text="Место работы"/>
+                            <TextBox Text="{Binding Patient.PlaceOfWork}" 
+                                     HorizontalAlignment="Left" Width="350" Height="100"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Border>
+            
+            <Border Background="#f4f4f4" CornerRadius="15" Padding="25">
+                <StackPanel Spacing="25">
+                    <TextBlock Text="Страховой полис" FontWeight="Bold"/>
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Left">
+                            <TextBlock Text="Номер страхового полиса"/>
+                            <TextBox Text="{Binding InsurancePolicy.Number}" Width="350"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right">
+                            <TextBlock Text="Компания страхового полиса" />
+                            <ComboBox ItemsSource="{Binding InsuranceCompanies}" 
+                                      Width="350"
+                                      SelectedItem="{Binding InsurancePolicy.InsuranceCompany}"
+                                      DisplayMemberBinding="{Binding Name}"/>
+                        </StackPanel>
+                    </Grid>
+                    
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Left">
+                            <TextBlock Text="Дата получения" />
+                            <CalendarDatePicker SelectedDate="{Binding InsurancePolicy.StartDate}" 
+                                                HorizontalContentAlignment="Right"
+                                                Width="350"
+                                                Watermark="Выберите дату"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right">
+                            <TextBlock Text="Дата окончания" />
+                            <CalendarDatePicker SelectedDate="{Binding InsurancePolicy.EndDate}" 
+                                                HorizontalContentAlignment="Right"
+                                                Width="350"
+                                                Watermark="Выберите дату"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <Border Grid.ColumnSpan="2" CornerRadius="15"  Margin="0,0,0,25"
+                HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="LightGray"
+                Padding="5">
+            <StackPanel Orientation="Horizontal" Spacing="50">
+                <Button Content="Сформировать направление"
+                        Command="{Binding GoCreateMedicalEvent}"/>
+                <Button Content="Внести запись"
+                        />
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,40 @@
+is_global = true
+build_property.RefitInternalNamespace = MISEmployeeDesktop
+build_property.AvaloniaNameGeneratorIsEnabled = true
+build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
+build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
+build_property.AvaloniaNameGeneratorFilterByPath = *
+build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MISEmployeeDesktop
+build_property.ProjectDir = A:\Программирование (вне учебы)\Чемпионат 2024\!Подготовка\Сессия 1\MISEmployeeDesktop\MISEmployeeDesktop\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[A:/Программирование (вне учебы)/Чемпионат 2024/\!Подготовка/Сессия 1/MISEmployeeDesktop/MISEmployeeDesktop/App.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[A:/Программирование (вне учебы)/Чемпионат 2024/\!Подготовка/Сессия 1/MISEmployeeDesktop/MISEmployeeDesktop/Styles/MainStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[A:/Программирование (вне учебы)/Чемпионат 2024/\!Подготовка/Сессия 1/MISEmployeeDesktop/MISEmployeeDesktop/Views/AuthorizationView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[A:/Программирование (вне учебы)/Чемпионат 2024/\!Подготовка/Сессия 1/MISEmployeeDesktop/MISEmployeeDesktop/Views/CreateMedicalEventView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[A:/Программирование (вне учебы)/Чемпионат 2024/\!Подготовка/Сессия 1/MISEmployeeDesktop/MISEmployeeDesktop/Views/MainView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[A:/Программирование (вне учебы)/Чемпионат 2024/\!Подготовка/Сессия 1/MISEmployeeDesktop/MISEmployeeDesktop/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[A:/Программирование (вне учебы)/Чемпионат 2024/\!Подготовка/Сессия 1/MISEmployeeDesktop/MISEmployeeDesktop/Views/MedicalCardDetailsView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

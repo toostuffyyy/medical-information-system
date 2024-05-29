@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="MISSheduleEmployee/App.axaml" value="MISSheduleEmployee/MISSheduleEmployee.csproj" />
+        <entry key="MISSheduleEmployee/Styles/MainStyles.axaml" value="MISSheduleEmployee/MISSheduleEmployee.csproj" />
+        <entry key="MISSheduleEmployee/Views/AuthorizationView.axaml" value="MISSheduleEmployee/MISSheduleEmployee.csproj" />
+        <entry key="MISSheduleEmployee/Views/MainWindow.axaml" value="MISSheduleEmployee/MISSheduleEmployee.csproj" />
+        <entry key="MISSheduleEmployee/Views/ScheduleDayView.axaml" value="MISSheduleEmployee/MISSheduleEmployee.csproj" />
+        <entry key="MISSheduleEmployee/Views/ScheduleView.axaml" value="MISSheduleEmployee/MISSheduleEmployee.csproj" />
+        <entry key="MISSheduleEmployee/Views/ScheduleWeekView.axaml" value="MISSheduleEmployee/MISSheduleEmployee.csproj" />
+        <entry key="MISSheduleEmployee/Views/SchedureView.axaml" value="MISSheduleEmployee/MISSheduleEmployee.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

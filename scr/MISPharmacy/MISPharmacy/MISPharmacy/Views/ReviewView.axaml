@@ -1,0 +1,43 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:MISPharmacy.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="viewModels:ReviewViewModel"
+             x:Class="MISPharmacy.Views.ReviewView">
+    <Grid RowDefinitions="*, 50">
+        <Grid>
+            <Button Content="Назад" Command="{Binding GoBackCommand}"
+                    HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <DataGrid ItemsSource="{Binding Medications}" AutoGenerateColumns="False" 
+                      Margin="25,25" IsReadOnly="True" HeadersVisibility="None" VerticalScrollBarVisibility="Auto" Width="300"
+                      HorizontalAlignment="Center">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn>
+                        <DataTemplate>
+                            <Border Background="{Binding Color}" CornerRadius="15" Padding="15" Margin="0, 15"
+                                    Width="250" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="Gray">
+                                <StackPanel Orientation="Horizontal" Spacing="50">
+                                    <TextBlock Text="{Binding Name}"/>
+                                    <TextBlock Text="{Binding SumAmount}"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Spacing="15" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="15">
+                <Button Content="Перемещение" HorizontalAlignment="Right"/>
+                <Button Content="Списание" HorizontalAlignment="Right"/>
+                <Button Content="Поступление" HorizontalAlignment="Right"/>
+            </StackPanel>
+        </Grid>
+        
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Spacing="25">
+            <Button Content="Лекарства"/>
+            <Button Content="Заявки"/>
+            <Button Content="Отчет"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

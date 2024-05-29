@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="MISEmployeeDesktop/App.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+        <entry key="MISEmployeeDesktop/Styles/MainStyles.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+        <entry key="MISEmployeeDesktop/Views/AuthorizationView.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+        <entry key="MISEmployeeDesktop/Views/CreateMedicalEventView.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+        <entry key="MISEmployeeDesktop/Views/MainView.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+        <entry key="MISEmployeeDesktop/Views/MainWindow.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+        <entry key="MISEmployeeDesktop/Views/MapDepartamentView.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+        <entry key="MISEmployeeDesktop/Views/MapDepartmentView.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+        <entry key="MISEmployeeDesktop/Views/MedicalCardDetailsView.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+        <entry key="MISEmployeeDesktop/Views/MedicalCardView.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+        <entry key="MISEmployeeDesktop/Views/TrackingView.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+        <entry key="MISEmployeeDesktop/Views/VisionView.axaml" value="MISEmployeeDesktop/MISEmployeeDesktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

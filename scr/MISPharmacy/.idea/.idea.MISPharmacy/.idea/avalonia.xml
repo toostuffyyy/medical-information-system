@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="MISPharmacy/MISPharmacy/App.axaml" value="MISPharmacy/MISPharmacy.Desktop/MISPharmacy.Desktop.csproj" />
+        <entry key="MISPharmacy/MISPharmacy/Views/DetailMedicationView.axaml" value="MISPharmacy/MISPharmacy.Desktop/MISPharmacy.Desktop.csproj" />
+        <entry key="MISPharmacy/MISPharmacy/Views/MainView.axaml" value="MISPharmacy/MISPharmacy.Desktop/MISPharmacy.Desktop.csproj" />
+        <entry key="MISPharmacy/MISPharmacy/Views/MainWindow.axaml" value="MISPharmacy/MISPharmacy.Desktop/MISPharmacy.Desktop.csproj" />
+        <entry key="MISPharmacy/MISPharmacy/Views/MedicationView.axaml" value="MISPharmacy/MISPharmacy.Desktop/MISPharmacy.Desktop.csproj" />
+        <entry key="MISPharmacy/MISPharmacy/Views/OrderView.axaml" value="MISPharmacy/MISPharmacy.Desktop/MISPharmacy.Desktop.csproj" />
+        <entry key="MISPharmacy/MISPharmacy/Views/ReviewView.axaml" value="MISPharmacy/MISPharmacy.Desktop/MISPharmacy.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
